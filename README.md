@@ -5,7 +5,7 @@ This is my personal project for Selenium WebDriver automation using Java 20.
 ## Prerequisites
 
 - [Java Development Kit (JDK) 20](https://www.oracle.com/java/technologies/javase-downloads.html)
-- Java IDE of your choice
+- Intellij 
 - Selenium WebDriver
 - ChromeDriver or WebDriver for your browser
 
@@ -13,4 +13,3 @@ This is my personal project for Selenium WebDriver automation using Java 20.
 
 This project is licensed under the MIT License.
 
-Enjoy your Selenium testing journey with Java 20! 🚀
