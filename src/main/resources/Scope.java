@@ -12,12 +12,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Scope {
 
     public static void main(String[] args) throws InterruptedException {
-        // TODO Auto-generated method stub
 
 //1. Give me the count of links on the page.
         //2. Count of
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\carlo\\OneDrive\\Documents\\chromedriver_v119.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\carlo\\OneDrive\\Documents\\chromedriver_v121.067.exe");
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
@@ -43,11 +42,10 @@ public class Scope {
 
         }// opens all the tabs
         Set<String> abc=driver.getWindowHandles();//4
+
         Iterator<String> it=abc.iterator();
 
-        while(it.hasNext())
-        {
-
+        while(it.hasNext()) {
             driver.switchTo().window(it.next());
             System.out.println(driver.getTitle());
 
