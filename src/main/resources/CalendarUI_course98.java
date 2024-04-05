@@ -21,6 +21,7 @@ public class CalendarUI_course98  {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
+
         driver.findElement(By.cssSelector(".react-date-picker__inputGroup")).click();
         driver.findElement(By.cssSelector(".react-calendar__navigation__label")).click();
         driver.findElement(By.cssSelector(".react-calendar__navigation__label")).click();
@@ -31,6 +32,7 @@ public class CalendarUI_course98  {
 
         System.out.println(driver.findElement(By.cssSelector(".react-date-picker__inputGroup")).getText());
 
+
         List<WebElement> actualList = driver.findElements(By.cssSelector(".react-date-picker__inputGroup__input"));
 
         for (int i = 0; i < actualList.size();i++) {
@@ -38,7 +40,7 @@ public class CalendarUI_course98  {
             Assert.assertEquals(actualList.get(i).getAttribute("value"),  expectedList[i]);
         }
 
-        driver.close();
+        // driver.close();
 
 
 
