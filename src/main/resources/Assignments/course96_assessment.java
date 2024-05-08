@@ -1,4 +1,4 @@
-package main.resources;
+package main.resources.Assignments;
 
 
 import org.openqa.selenium.By;
