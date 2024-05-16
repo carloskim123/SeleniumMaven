@@ -1,5 +1,6 @@
 package main.resources;
 
+<<<<<<< HEAD
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -11,6 +12,13 @@ import java.io.IOException;
 
 public class Miscelleanous {
     public static void main(String[] args) throws IOException {
+=======
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Miscelleanous {
+    public static void main(String[] args) {
+>>>>>>> origin/main
         // Todo: Lesson 107 : Maximizing window and deleting cookies
 
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\carlo\\OneDrive\\Documents\\DownloadedChromedrivers\\chromedriver_v123.0.6312.122.exe");
@@ -24,7 +32,12 @@ public class Miscelleanous {
 
         driver.get("http://google.com");
 
+<<<<<<< HEAD
         File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
        FileUtils.copyFile(src,new File("D://screenshot.png"));
+=======
+
+
+>>>>>>> origin/main
     }
 }
