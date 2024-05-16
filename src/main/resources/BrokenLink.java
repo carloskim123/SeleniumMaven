@@ -28,6 +28,7 @@ public class BrokenLink {
 
         conn.connect();
 
+
         int responseCode = conn.getResponseCode();
 
         System.out.println(responseCode);
