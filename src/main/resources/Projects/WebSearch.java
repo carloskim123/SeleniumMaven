@@ -14,10 +14,10 @@ import java.util.List;
 public class WebSearch {
 
     static class SearchResult {
-        private String title;
-        private String source;
-        private String rating;
-        private String ingredients;
+        private final String title;
+        private final String source;
+        private final String rating;
+        private final String ingredients;
 
         // constructor
         public SearchResult(String title, String source, String rating, String ingredients) {

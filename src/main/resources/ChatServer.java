@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChatServer {
-    private static List<ClientHandler> clients = new ArrayList<>();
+    private static final List<ClientHandler> clients = new ArrayList<>();
 
     public static void main(String[] args) {
         try {
@@ -32,7 +32,7 @@ public class ChatServer {
     }
 
     static class ClientHandler extends Thread {
-        private Socket clientSocket;
+        private final Socket clientSocket;
         private BufferedReader reader;
         private PrintWriter writer;
 

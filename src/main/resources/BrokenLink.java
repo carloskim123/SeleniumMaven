@@ -15,7 +15,7 @@ import java.net.URLConnection;
 import java.util.List;
 
 public class BrokenLink {
-    public static void main(String[] args) throws MalformedURLException, IOException {
+    public static void main(String[] args) throws IOException {
         System.setProperty("webdriver.edge.driver", "C:\\Users\\carlo\\OneDrive\\Documents\\EDGE_WEBDRIVERS\\msedgedriver_126.0.2592.68.exe");
         WebDriver driver = new EdgeDriver();
 
@@ -44,9 +44,8 @@ public class BrokenLink {
 
         }
 
+
         $softAssert.assertAll();
-
-
 
 
 
