@@ -1,10 +1,12 @@
 package main.resources.JavaStreams;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Lesson115 {
@@ -68,10 +70,12 @@ public class Lesson115 {
     }
 
 
-    @Test
+//    @Test
     public void streamMap() {
 
-        ArrayList<String> names = new ArrayList<String>();;
+        ArrayList<String> names = new ArrayList<String>();
+        names.add("man");
+        names.add("woman");
 
         // print names which have last letter as "a" in Uppercase
 
@@ -83,13 +87,61 @@ public class Lesson115 {
         // print names which have first letter as "a" in Uppercase and sorted
 
         List<String> names1 = Arrays.asList("Abhijeet", "Don", "Alekhya", "Arnold", "Adam", "Rama");
-        names1.stream().filter(s -> s.startsWith("A")).sorted().map(m -> m.toUpperCase()).forEach(System.out::println);
+        names1.stream().filter(s -> s.endsWith("a")).sorted().map(String::toUpperCase).forEach(System.out::println);
 
-        // merging two streams
+        // merging two lists
         Stream<String> newStream = Stream.concat(names.stream(), names1.stream());
-        newStream.sorted().forEach(System.out::println);
+//        newStream.sorted().forEach(System.out::println);
+
+       boolean flag =  newStream.anyMatch(s -> s.equalsIgnoreCase("Adam"));
+        System.out.println(flag);
+        Assert.assertTrue(flag);
 
     }
 
+    @Test
+    public void streamCollect () {
+//        List<String> ls = Stream.of("Abhijeet", "Don", "Alekhya", "Arnold", "Adam", "Rama")
+//                .filter(s -> s.endsWith("a"))
 
+
+//                .map(m -> m.toUpperCase()).collect(Collectors.toList());
+//
+//        System.out.println(ls.get(0));
+
+        List<Integer> values = Arrays.asList(3, 2, 2, 7, 5, 1, 9, 7);
+        // print unique numbers in this array
+        // sort the array
+        List<Integer> li =  values.stream().distinct().sorted().collect(Collectors.toList());
+        System.out.println(li.get(2));
+
+
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
