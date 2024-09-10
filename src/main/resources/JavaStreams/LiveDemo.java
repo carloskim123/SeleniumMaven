@@ -42,8 +42,7 @@ public class LiveDemo {
         List<String> price;
         do {
             List<WebElement> row = driver.findElements(By.xpath("//tr//td[1]"));
-
-//        // scan the name column with getText -> Beans -> print its price
+       // scan the name column with getText -> Beans -> print its price
             price = row.stream()
                     .filter(e -> e.getText().contains("Rice"))
                     .map(LiveDemo::getPriceVeggie).toList();
